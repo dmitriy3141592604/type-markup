@@ -1,6 +1,11 @@
 package com.github.typemarkup;
 
-import java.lang.annotation.ElementType;
+import static java.lang.annotation.ElementType.FIELD;
+import static java.lang.annotation.ElementType.LOCAL_VARIABLE;
+import static java.lang.annotation.ElementType.METHOD;
+import static java.lang.annotation.ElementType.PACKAGE;
+import static java.lang.annotation.ElementType.TYPE;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
@@ -12,7 +17,8 @@ import java.lang.annotation.Target;
  *
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.TYPE, ElementType.METHOD })
+@Target({ TYPE, METHOD, FIELD, LOCAL_VARIABLE, PACKAGE })
+@Responsibility("Отвечает за описание ответственности аннотированной сущьности")
 public @interface Responsibility {
 
 	/**
@@ -20,5 +26,6 @@ public @interface Responsibility {
 	 *
 	 * @return Строковое представление ответственности класса или метода.
 	 */
+	@Responsibility("Предоставляет возможность получения текстового описания ответственности аннотированной сущьности")
 	String value();
 }

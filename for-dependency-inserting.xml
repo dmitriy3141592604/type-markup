@@ -1,0 +1,26 @@
+<dependency-inserting>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<com.github.type-markup>0.0.2</com.github.type-markup>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>com.github.type-markup</groupId>
+			<artifactId>type-markup</artifactId>
+			<version>${com.github.type-markup}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>fdv-slf4j-logback</groupId>
+			<artifactId>fdv-slf4j-logback</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
+	</dependencies>
+
+</dependency-inserting>
